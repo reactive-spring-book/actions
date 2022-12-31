@@ -53,7 +53,7 @@ jobs:
       - run: echo "using $JAVA_MAJOR_VERSION"
 
       - name: Build
-        run: ls -la $GITHUB_WORKSPACE/.github/workflows/build.sh && $GITHUB_WORKSPACE/.github/workflows/build.sh 
+        run: ls -la $GITHUB_WORKSPACE/.github/workflows/build.sh && $GITHUB_WORKSPACE/.github/workflows/build.sh || echo "no .github/workflows/build.sh found"
         
       - name: Maven 
         run: mvn -e -f $GITHUB_WORKSPACE/pom.xml verify deploy 
