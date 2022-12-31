@@ -45,7 +45,7 @@ jobs:
       - run: echo "using $JAVA_MAJOR_VERSION"
 
       - name: Build
-        run: cd $GITHUB_WORKSPACE/.github/workflows ; ls -la  ./build.sh && ./build.sh  || die "could not invoke $GITHUB_WORKSPACE/.github/workflows"
+        run: cd $GITHUB_WORKSPACE/.github/workflows ; ls -la  ./build.sh && ./build.sh  || exit 1 
 
       - name: Initiate Pipeline
         run: |
