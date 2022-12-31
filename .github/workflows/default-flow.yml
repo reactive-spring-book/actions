@@ -14,12 +14,7 @@ env:
   PIPELINE_ORG_NAME: reactive-spring-book
   PIPELINE_REPO_NAME: pipeline
   
-
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
   workflow_call:
 
 jobs:
