@@ -10,11 +10,10 @@ env:
   SPRING_PROFILES_ACTIVE: ci
 
   GH_PAT: ${{ secrets.GH_PAT }}
-  GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
-  GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
-
-  PIPELINE_REPO_NAME: ${{ secrets.PIPELINE_REPO_NAME }}
-  PIPELINE_ORG_NAME: ${{ secrets.PIPELINE_ORG_NAME }}
+  
+  PIPELINE_ORG_NAME: reactive-spring-book
+  PIPELINE_REPO_NAME: pipeline
+  
 
 on:
   push:
@@ -29,20 +28,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - uses: actions/checkout@v3
+      # - uses: actions/checkout@v3
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          distribution: "adopt"
-          java-version: 17
+      # - name: Set up JDK 17
+      #   uses: actions/setup-java@v3
+      #   with:
+      #     distribution: "adopt"
+      #     java-version: 17
 
-      - name: Cache Maven packages
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-m2
-          restore-keys: ${{ runner.os }}-m2
+      # - name: Cache Maven packages
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/.m2/repository
+      #     key: ${{ runner.os }}-m2
+      #     restore-keys: ${{ runner.os }}-m2
 
       - run: echo "hello, world"
 
