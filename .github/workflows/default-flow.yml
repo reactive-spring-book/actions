@@ -55,7 +55,7 @@ jobs:
           cache: 'maven'
           java-version: ${{ env.JAVA_MAJOR_VERSION }}
 
-      - run: echo "using @JAVA_MAJOR_VERSION"
+      - run: echo "using $JAVA_MAJOR_VERSION"
 
       # - name: Build
       #   run: cd $GITHUB_WORKSPACE/.github/workflows ; ./build.sh
