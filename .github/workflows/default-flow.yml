@@ -5,8 +5,6 @@ env:
   ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
   ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
 
-  KINDLEGEN: /home/runner/bin/kindlegen/kindlegen
-
   SPRING_PROFILES_ACTIVE: ci
 
   GH_PAT: ${{ secrets.GH_PAT }}
